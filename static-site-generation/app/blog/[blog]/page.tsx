@@ -4,6 +4,8 @@ interface PageProps {
         blog: string;
     }>
 }
+//jitne humne sledct karen hai sirf whi hi static genration mai add honge 
+export const dynamicParams = false; // Disable dynamic params to ensure static generation
 export async function generateStaticParams() {
     const res = await fetch('https://dummyjson.com/posts')
     const data = await res.json()
